@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Happy Birthday Jay!</title>
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static 'birthday/assets/img/favicon.ico' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'birthday/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ml-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'memories' %}">Memories</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'videos' %}">Videos</a></li>
+                        <li class="nav-item"><a class="nav-link j-scroll-trigger" href="{% url 'stories' %}">Stories</a></li>
+                        {% if current_user %}
+                            <li class="nav-item"><a class="nav-link j-scroll-trigger" href="{% url 'logout' %}">Logout</a></li>
+                        {% else %}
+                            <li class="nav-item"><a class="nav-link j-scroll-trigger" data-toggle="modal" href="#Login">Login</a></li>
+                        {% endif %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %}">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Happy Birthday</div>
+                <div class="masthead-heading text-uppercase">#JAY</div>
+               
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">My Interests</h2>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-skating fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Dancing</h4>
+                        <p class="text-muted">The job of feet is walking, but their hobby is dancing</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-pen fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Story Writing</h4>
+                        <p class="text-muted">A Writer, I think, is someone who pays attention to the world</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-basketball-ball fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Basketball</h4>
+                        <p class="text-muted">The idea is not to block everyshot. The idea is to make your opponent believe that you might block every shot</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">My Journey</h2>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'birthday/assets/img/about/1.jpg' %}" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2006-2016</h4>
+                                <h4 class="subheading">Oxford High School</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">No matter how much you think you hate school, you'll always miss it when you leave </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'birthday/assets/img/about/4.jpg' %}" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2016-2018</h4>
+                                <h4 class="subheading">SR NVB College</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">One of the benefits of bad education is the constant pleasure of discovery. </p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'birthday/assets/img/about/1.jpg' %}" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2018-present</h4>
+                                <h4 class="subheading">Hyderabad Institute of Technology and Management</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">We are not having fun, we are making memories.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'birthday/assets/img/about/4.jpg' %}" alt="" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Expecting a Beautiful Future</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">What is coming is better than what is gone.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Life
+                                <br />
+                                is a
+                                <br />
+                                Journey...
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-left">Developed by Shiva Teja Bandaru</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/ShivaTejaHitam?tab=repositories"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/shivateja.bandaru/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/shiva-teja-10133a192/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Modal  -->
+        <div class="portfolio-modal modal fade" id="Login" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal"><img src="{% static 'birthday/assets/img/close-icon.svg' %}" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here-->
+                                    <h2 class="text-uppercase">Login</h2>
+                                    <br>
+                                    <form  name="sentMessage"  action="" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="row align-items-stretch mb-10">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input class="form-control" id="id_email" name="email" type="email" placeholder="Enter Email *" required />
+                                                    <p class="help-block text-danger"></p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" id="id_password" name="password" type="password" placeholder="Enter password *" required />
+                                                    <p class="help-block text-danger"></p>
+                                                </div>                     
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <div id="success"></div>
+                                            <input class="btn btn-primary btn-xl text-uppercase" value="Login" type="submit">
+                                        </div>
+                                    </form>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal End-->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+        <script src="{% static 'birthday/assets/mail/jqBootstrapValidation.js' %}"></script>
+        <script src="{% static 'birthday/assets/mail/contact_me.js' %}"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'birthday/js/scripts.js' %}"></script>
+    </body>
+</html>
